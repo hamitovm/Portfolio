@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.main {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #1E1F25;
+    background-color: #D6D8CE;
+}
+
+.wrapper {
+    max-width: 940px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+
+.contacts_list {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* HEADER ______________________________________________________________*/
+
+header {
+    padding: 0;
+    margin-bottom: 70px;
+
+    border-bottom: 1px solid black;
+}
+
+.mainHeader {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+}
+
+.logo {
+    display: block;
+    width: 40px;
+    margin: auto 60px auto 0;
+
+}
+
+.mainHeader__menu {
+
+}
+
+.mainHeader__linkList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+}
+
+.mainHeader__link {
+    height: 70px;
+
+    display: block;
+    margin-right: 20px;
+    list-style: none;
+    text-decoration: none;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 50px;
+}
+
+.mainHeader__link a {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+    text-decoration: none;
+    color: #1E1F25;
+}
+
+.mainHeader__link a:hover {
+    border-bottom: 3px solid #B50814;
+    padding: 10px 10px 7px;
+    transition: 0.05s;
+}
+
+/* First Screen ______________________________________________________________*/
+.firstScreen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+.first_screen__text {
+    max-width: 420px;
+    margin-right: 20px;
+    margin-bottom: 35px;
+}
+
+.heading {
+    margin: 5px 0 15px;
+
+    font-size: 70px;
+    line-height: 65px;
+
+}
+
+.subtitle_red {
+    margin: 0 0 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 45px;
+
+    color: #B50814;
+}
+
+.first_screen__text .text {
+    margin: 0;
+    position: relative;
+    padding-left: 15px;
+
+    /*border: 1px solid red;*/
+}
+
+.first_screen__text .text::before {
+    position: absolute;
+    content: '';
+    top: 2px;
+    left: 0;
+    width: 15px;
+    height: 100%;
+    background-image: url('https://www.svgrepo.com/show/309741/location.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+}
+
+.first_screen__image {
+    width: 300px;
+    height: 280px;
+}
+
+/* Technologies ______________________________________________________________*/
+
+.technologies {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1E1F25;
+
+    margin-bottom: 60px;
+}
+
+.technologies__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-left: calc((100vw - 960px) * 0.5 + 160px);
+    margin-right: auto;
+    /*border: 1px solid red;*/
+}
+
+.subtitle {
+    margin: 0 0 30px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.subtitle_alt {
+    margin: 0;
+    padding: 0 0 15px;
+
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 45px;
+
+
+}
+
+.technologies .subtitle_alt {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #D6D8CE;
+}
+
+.technologies_list {
+    margin: 0;
+    padding: 0 20px 0;
+    background-color: #D6D8CE;
+}
+
+.technology_item {
+    margin: 0;
+    padding: 0 20px 0 0;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Projects ______________________________________________________________*/
+.projects {
+    margin-bottom: 70px;
+}
+
+/* Contacts ______________________________________________________________*/
+footer {
+    margin: 0;
+    border-top: 1px solid black;
+    padding-top: 20px;
+}
+
+.contacts_list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.contacts_item {
+    position: relative;
+    padding-bottom: 15px;
+    margin-left: 25px;
+}
+
+.contacts_item a::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -25px;
+    width: 20px;
+    height: 90%;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+}
+
+.contacts_item:nth-child(1) a::before {
+    background-image: url('../../image/mail_icon.svg');
+}
+
+.contacts_item:nth-child(2) a::before {
+    background-image: url('../../image/telegram_icon.svg');
+}
+
+.contacts_item:nth-child(3) a::before {
+    top: -3px;
+
+    left: -28px;
+    width: 25px;
+    height: 100%;
+    background-image: url('../../image/github_icon.svg');
+}
+
+
+.contacts_item a {
+    text-decoration: none;
+
+    color: #1E1F25;
+}
+
+.contacts_item a:hover, .contacts_item a:active {
+    text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 768px) {
+    header {
+        margin-bottom: 50px;
+    }
+
+    .mainHeader {
+        width: 70vw;
+        margin: 0 auto;
+    }
+
+    .logo {
+        margin-right: 30px;
+    }
+
+    .mainHeader__link {
+        margin-right: 10px;
+    }
+
+    .firstScreen {
+        flex-direction: column;
+        align-items: center;
+
+        margin-bottom: 50px;
+    }
+
+    .first_screen__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-bottom: 20px;
+    }
+
+    .first_screen__text .heading, .subtitle_red {
+        text-align: center;
+    }
+
+    .technologies {
+        padding: 0;
+        margin: 0 auto 50px;
+    }
+
+    .technologies__wrapper {
+        padding-left: 0;
+        margin: 0 auto;
+    }
+
+    .projects {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+
+    .projects .subtitle {
+        text-align: center;
+    }
+
+    footer div {
+        width: 70vw;
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+    header {
+        margin-bottom: 25px;
+    }
+
+    .mainHeader {
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+    .first_screen__text {
+        margin-bottom: 15px;
+    }
+
+    .heading {
+        margin: 5px 0 10px;
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    .mainHeader__link {
+        height: 70px;
+
+        margin-right: 0;
+
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 50px;
+    }
+
+    .mainHeader__link a {
+    }
+
+    .mainHeader__menu {
+
+        flex-grow: 2;
+    }
+
+    .mainHeader__linkList {
+        justify-content: space-around;
+    }
+
+
+    .subtitle_red {
+        margin: 0 0 5px;
+
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .subtitle, .subtitle_alt {
+        font-size: 35px;
+        line-height: 35px;
+    }
+
+    .projects {
+        margin-bottom: 35px;
+    }
+}

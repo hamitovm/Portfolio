@@ -1,107 +1,89 @@
 import React from 'react';
 import './App.css';
-import s from './common/styles/Container.module.css'
-import logo from './image/logo.png'
-import photo from './image/photo.png'
+import s from "./common/styles/mainCSS.module.css";
+import logo from "./image/logo.png";
+import photo from "./image/photo.png";
 import {Project} from "./Project/Project";
+import todolist_image from "./image/To_Do_List.png";
+import social_network_image from "./image/social-network.jpg";
+import no_name_project_image from "./image/no-name-project.png";
 
 const loremIpsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
 
 function App() {
     return (
-        <div className={s.app}>
-            {/*<div className={s.wrapper}>*/}
-            <header>
-                <div className={s.wrapper}>
-                    <div className={s.header}>
-                        <div className={s.logo}>
-                            <img src={logo} alt=""/>
-                        </div>
-                        <nav className={s.menu}>
-                            <ul className={s.menu__item_list}>
-                                <li className={s.menu__item}><a href="#">About</a></li>
-                                <li className={s.menu__item}><a href="#">Projects</a></li>
-                                <li className={s.menu__item}><a href="#">Contacts</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </header>
-            <main>
-                <section>
-                    <div className={s.wrapper}>
-                        <div className={s.first_screen}>
-                            <div className={s.first_screen__text}>
-                                <h1 className={s.heading}>
-                                    Frontend developer
-                                </h1>
-                                <p className={s.subtitle_red}>Murat Khamitov</p>
-                                <p className={s.location}>Kazan</p>
-                            </div>
-                            <div className={s.first_screen__image}>
-                                <img src={photo} alt=""/>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <div className={s.technologies_wrapper}>
-                        <div className={s.wrapper}>
-                            <div className={s.technologies}>
-                                <p className={s.subtitle_alt}>Technologies</p>
-                                <ul className={s.technologies_list}>
-                                    <li className={s.technology_item}>HTML/CSS</li>
-                                    <li className={s.technology_item}>JavaScript/TypeScript</li>
-                                    <li className={s.technology_item}>React JS</li>
-                                    <li className={s.technology_item}>REST API</li>
-                                    <li className={s.technology_item}>Git</li>
+        <div className={'app'}>
+            <div className={s.main}>
+                <header>
+                    <div className={`${s.wrapper}`}>
+                        <div className={`${s.mainHeader}`}>
+                            <img className={s.logo} src={logo} alt={'main logo'}/>
+                            <nav className={s.mainHeader__menu}>
+                                <ul className={s.mainHeader__linkList}>
+                                    <li className={s.mainHeader__link}><a href="#about">About</a></li>
+                                    <li className={s.mainHeader__link}><a href="#projects">Projects</a></li>
+                                    <li className={s.mainHeader__link}><a href="#contacts">Contacts</a></li>
                                 </ul>
-                            </div>
+                            </nav>
                         </div>
                     </div>
-
-
-                </section>
-                <section>
-                    <div className={s.wrapper}>
-                        <div className={s.projects_section}>
-                            <p className={s.subtitle}>Projects</p>
-                            <Project projectName={'Todolist'}
-                                     text={loremIpsum}
-                                     type={"left"}
-                                     img={'#'}
-                                     link={'https://www.google.ru/'}
-                            />
-                            <Project projectName={'Social Network'}
-                                     text={loremIpsum}
-                                     type={"right"}
-                                     img={'#'}
-                                     link={'google.com'}
-                            />
-                            <Project projectName={'Todolist'}
-                                     text={loremIpsum}
-                                     type={"left"}
-                                     img={'#'}
-                                     link={'google.com'}
-                            />
+                </header>
+                <main>
+                    <section className={`${s.firstScreen} ${s.wrapper}`} id={'about'}>
+                        <div className={s.first_screen__text}>
+                            <h1 className={s.heading}>
+                                Frontend developer
+                            </h1>
+                            <p className={s.subtitle_red}>Murat Khamitov</p>
+                            <p className={s.text}>Kazan</p>
                         </div>
-                    </div>
-
-                </section>
-            </main>
-            <footer>
-                <div className={s.wrapper}>
-                    <div className={s.contacts}>
+                        <img className={s.first_screen__image} src={photo} alt="developer"/>
+                    </section>
+                    <section className={`${s.technologies}`}>
+                        <div className={`${s.technologies__wrapper}`}>
+                            <h2 className={s.subtitle_alt}>Technologies</h2>
+                            <ul className={s.technologies_list}>
+                                <li className={s.technology_item}>HTML/CSS</li>
+                                <li className={s.technology_item}>JavaScript/TypeScript</li>
+                                <li className={s.technology_item}>React JS</li>
+                                <li className={s.technology_item}>REST API</li>
+                                <li className={s.technology_item}>Git</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section className={`${s.projects} ${s.wrapper}`} id={'projects'}>
+                        <h2 className={s.subtitle}>Projects</h2>
+                        <Project title={'Todolist'}
+                                 desciption={loremIpsum}
+                                 type={"left"}
+                                 img={todolist_image}
+                                 link={'https://www.google.ru/'}
+                        />
+                        <Project title={'Social Network'}
+                                 desciption={loremIpsum}
+                                 type={"right"}
+                                 img={social_network_image}
+                                 link={'google.com'}
+                        />
+                        <Project title={'No name'}
+                                 desciption={loremIpsum}
+                                 type={"left"}
+                                 img={no_name_project_image}
+                                 link={'google.com'}
+                        />
+                    </section>
+                </main>
+                <footer id={'contacts'}>
+                    <div className={`${s.wrapper}`}>
                         <p className={s.subtitle_alt}>Contacts</p>
                         <ul className={s.contacts_list}>
-                            <li className={s.contacts_item}><a href="#">Email: hamitovm@gmail.com</a></li>
-                            <li className={s.contacts_item}><a href="#">Telegram</a></li>
-                            <li className={s.contacts_item}><a href="#">GitHub</a></li>
+                            <li className={s.contacts_item}><a href="https://mail.google.com/">hamitovm@gmail.com</a></li>
+                            <li className={s.contacts_item}><a href="https://web.telegram.org/">Telegram</a></li>
+                            <li className={s.contacts_item}><a href="https://github.com/hamitovm">GitHub</a></li>
                         </ul>
                     </div>
-                </div>
-            </footer>
-            {/*</div>*/}
+                </footer>
+            </div>
         </div>
     );
 }

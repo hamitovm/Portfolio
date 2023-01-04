@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .app {
   margin: 0;
   padding: 0;
@@ -12,16 +17,8 @@
   color: #1E1F25;
 
   background-color: #D6D8CE;
+    /*border: 3px solid red;*/
   /*background-color: red;*/
 }
 
-a {
-  text-decoration: none;
-}
 
-.wrapper {
-  width: 960px;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
